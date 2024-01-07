@@ -8,10 +8,10 @@ function NhanVien() {
   this.luongCB = 0;
   this.gioLam = 0;
   this.chucvu = "";
-  this.xepLoai = "";
+
   //phương thức tính tổng lương
   this.tongLuong = function () {
-    var tongLuong = "";
+    var tongLuong = 0;
     if (this.chucvu === "Sếp") {
       tongLuong = this.luongCB * 3;
     } else if (this.chucvu === "Trưởng phòng") {
@@ -22,17 +22,17 @@ function NhanVien() {
     return tongLuong;
   };
 
-  //phương thức tính xếp loại
+  // Phương thức tính xếp loại
   this.xepLoai = function () {
     var xepLoai = "";
-    if (this.gioLam >= 80 && this.gioLam >= 192) {
+    if (this.gioLam >= 192) {
       xepLoai = "Nhân viên xuất sắc";
-    } else if (this.gioLam >= 80 && this.gioLam >= 176) {
+    } else if (this.gioLam >= 176) {
       xepLoai = "Nhân viên giỏi";
-    } else if (this.gioLam >= 80 && this.gioLam >= 160) {
+    } else if (this.gioLam >= 160) {
       xepLoai = "Nhân viên khá";
     } else {
-      xepLoai = "Nhân viên trung bình ";
+      xepLoai = "Nhân viên trung bình";
     }
     return xepLoai;
   };
